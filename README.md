@@ -36,16 +36,27 @@ filteredEmployees: An array that holds the list of employees filtered based on t
 The Employee component provides the following methods:
 
 refreshList(): Fetches the list of employees from the API and updates the employees and filteredEmployees state with the data.
+
 changeusername(e): Updates the username state with the value entered in the name input field.
+
 changeemail(e): Updates the email state with the value entered in the email input field.
+
 changephone(e): Updates the phone state with the value entered in the phone input field.
+
 changeskillsets(e): Updates the skillsets state with the value entered in the skillsets input field and filters the employees accordingly.
+
 filterEmployees(): Filters the employees array based on the skillsets state and updates the filteredEmployees state with the filtered result.
+
 addClick(): Sets the state to add a new employee, clearing all input fields.
+
 editClick(emp): Sets the state to edit an existing employee with the details provided in the emp parameter.
+
 createClick(): Sends a POST request to the API to create a new employee based on the input fields' values.
+
 updateClick(): Sends a PUT request to the API to update the details of an existing employee based on the input fields' values.
+
 deleteClick(id): Sends a DELETE request to the API to delete an employee with the given ID.
+
 # Lifecycle Methods
 The Employee component utilizes the componentDidMount lifecycle method to fetch the list of employees from the API when the component is mounted.
 
@@ -53,6 +64,7 @@ The Employee component utilizes the componentDidMount lifecycle method to fetch 
 The Employee component renders a table view displaying the list of employees. It includes the following elements:
 
 Search bar: An input field to search for employees based on their skillsets.
+
 "Add Employee" button: A button to open the modal for adding a new employee.
 Employee Table: A table displaying the list of employees with columns for ID, Username, Email, Phone No., Skillsets, Hobby, and Options (Edit/Delete buttons).
 # Modal
