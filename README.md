@@ -1,5 +1,5 @@
 ![image](https://github.com/affzkwn/completedevnet/assets/71445275/5edcaf0a-509d-4f30-a80c-7dbe88cff6fc)
-# Complete Developer Network Documentation Front-End
+# CDN - Freelance Management Web Application Documentation (Front-End)
 # Description
 The Employee component is a part of a React web application that allows users to manage a list of employees or freelancers. Users can add, edit, and delete employees from the list. The component provides a table view to display the list of employees along with options to perform various operations.
 
