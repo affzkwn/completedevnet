@@ -82,20 +82,6 @@ The filtering of employees based on skillsets is case-insensitive.
 Example
 Below is an example of how to use the Employee component in your application:
 
-/*# Example
-import React from 'react';
-import { Employee } from './Employee'; // Replace './Employee' with the correct path to the Employee component file.
-
-function App() {
-  return (
-    <div>
-      <h1>Employee Management</h1>
-      <Employee />
-    </div>
-  );
-}
-
-export default App;*/
 # Dependencies
 The Employee component requires the following dependencies:
 
