@@ -15,14 +15,23 @@ The Employee component does not accept any props from its parent component.
 The Employee component maintains the following state:
 
 employees: An array that holds the list of employees fetched from the API.
+
 modalTitle: A string representing the title of the modal displayed for adding/editing an employee.
+
 usernameId: An integer representing the ID of the employee being edited. If it's 0, it indicates a new employee is being added.
+
 username: A string representing the name of the employee being added/edited.
+
 email: A string representing the email of the employee being added/edited.
+
 phone: A string representing the phone number of the employee being added/edited.
+
 skillsets: A string representing the skillsets of the employee being added/edited.
+
 hobby: A string representing the hobby of the employee being added/edited.
+
 filteredEmployees: An array that holds the list of employees filtered based on the search input.
+
 # Methods
 The Employee component provides the following methods:
 
