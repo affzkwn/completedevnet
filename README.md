@@ -7,11 +7,11 @@ The Employee component is a part of a React web application that allows users to
 To use the Employee component in your application, follow these steps:
 
 Import the Employee component at the top of your file where you want to use it.
-# JSX Code
+# Example
 import React from 'react';
 import { Employee } from './Employee'; // Replace './Employee' with the correct path to the Employee component file.
 Place the Employee component in your JSX/HTML code.
-# JSX Code
+# Example
 function App() {
   return (
     <div>
@@ -73,7 +73,7 @@ The filtering of employees based on skillsets is case-insensitive.
 Example
 Below is an example of how to use the Employee component in your application:
 
-# JSX Code
+# Example
 import React from 'react';
 import { Employee } from './Employee'; // Replace './Employee' with the correct path to the Employee component file.
 
