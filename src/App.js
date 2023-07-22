@@ -2,20 +2,21 @@
 import './App.css';
 import { Home } from './Home';
 import { Employee } from './Employee';
-import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink, Switch, Redirect } from 'react-router-dom';
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
     <div className="App container">
       <h3 className='d-flex justify-content-center m-3'>
-        Freelance Management 
+        Freelance Management
       </h3>
 
       <nav className='navbar navbar-expand-sm bg-light navbar-dark'>
         <ul className='navbar-nav'>
           <li className='nav-item- m-1'>
-            <NavLink className='btn btn-light btn-outline-primary' to="/home">
+            <NavLink exact className='btn btn-light btn-outline-primary' to="/home">
               Home
             </NavLink>
           </li>
@@ -26,12 +27,13 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Switch>
-      <Route path='/home' component ={Home}/>
-      <Route path='/employee' component ={Employee}/>
-      </Switch>
+        <Switch>
+          <Route path='/home' component ={Home}/>
+          <Route path='/employee' component ={Employee}/>
+          <Redirect exact from="/" to="/home" />
+        </Switch>
     </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
