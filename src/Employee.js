@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//import { variables } from './Variable';
 export class Employee extends Component {
   constructor(props) {
     super(props);
@@ -48,6 +49,9 @@ export class Employee extends Component {
   };
   changephone = (e) => {
     this.setState({ phone: e.target.value });
+  };
+  changehobby = (e) => {
+    this.setState({ hobby: e.target.value });
   };
   changeskillsets = (e) => {
     const skillsets = e.target.value;
@@ -172,6 +176,13 @@ export class Employee extends Component {
     }
   }
 
+  handleChangePhone = (event) => {
+    const { value } = event.target;
+    // Remove any non-numeric characters from the input
+    const cleanedPhone = value.replace(/[^0-9]/g, '');
+    this.setState({ phone: cleanedPhone });
+  }
+
   render() {
     const {
       filteredEmployees,
@@ -204,13 +215,13 @@ export class Employee extends Component {
         >
           Add Employee
         </button>
-        <table className="table table-striped">
+        <table className="table table-striped mb-1">
           <thead>
             <tr>
               <th>ID</th>
               <th>Username</th>
               <th>E-mail</th>
-              <th>Phone No.</th>
+              <th>Telephone</th>
               <th>Skillsets</th>
               <th>Hobby</th>
               <th>Options</th>
@@ -228,7 +239,7 @@ export class Employee extends Component {
                 <td>
                   <button
                     type="button"
-                    className="btn btn-light mr-1"
+                    className="btn btn-light m-1"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                     onClick={() => this.editClick(emp)}
@@ -250,14 +261,14 @@ export class Employee extends Component {
 
                   <button
                     type="button"
-                    className="btn btn-light mr-1"
+                    className="btn btn-light m-1"
                     onClick={() => this.deleteClick(emp.usernameId)}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
                       height="16"
-                      fill="currentColor"
+                      fill="red"
                       className="bi bi-trash-fill"
                       viewBox="0 0 16 16"
                     >
@@ -279,6 +290,7 @@ export class Employee extends Component {
               </div>
 
               <div className="modal-body">
+              <form>
                 <div className="d-flex flex-row bd-highlight mb-3">
                   <div className="p-2 w-50 bd-highlight">
                     <div className="input-group mb-3">
@@ -293,20 +305,23 @@ export class Employee extends Component {
                     <div className="input-group mb-3">
                       <span className="input-group-text">E-mail</span>
                       <input
-                        type="text"
+                        type="email"
                         className="form-control"
                         value={email}
                         onChange={this.changeemail}
                       />
                     </div>
                     <div className="input-group mb-3">
-                      <span className="input-group-text">Phone No</span>
+                      <span className="input-group-text">Telephone</span>
                       <input
                         type="text"
                         className="form-control"
+                        pattern="[0-9]*"
                         value={phone}
-                        onChange={this.changephone}
-                      />
+                        minLength={10}
+                        maxLength={11}
+                        onChange={this.handleChangePhone}
+                    />
                     </div>
                     <div className="input-group mb-3">
                       <span className="input-group-text">Skillsets</span>
@@ -328,7 +343,7 @@ export class Employee extends Component {
                     </div>
                   </div>
                 </div>
-
+                </form>
                 {usernameId === 0 ? (
                   <button
                     type="button"
