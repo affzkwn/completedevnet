@@ -10,10 +10,10 @@ function App() {
     <Router>
     <div className="App container">
       <h3 className='d-flex justify-content-center m-3'>
-        Freelance Management
+        Complete Developer Network
       </h3>
 
-      <nav className='navbar navbar-expand-sm bg-light navbar-dark'>
+      <nav className='navbar navbar-expand-sm bg-light navbar-dark mb-2'>
         <ul className='navbar-nav'>
           <li className='nav-item- m-1'>
             <NavLink exact className='btn btn-light btn-outline-primary' to="/home">
@@ -33,6 +33,7 @@ function App() {
           <Redirect exact from="/" to="/home" />
         </Switch>
     </div>
+    
     </Router>
   );
 }
