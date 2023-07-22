@@ -11,7 +11,7 @@ export class Employee extends Component {
       usernameId: 0,
       username: '',
       email: '',
-      phone: 0,
+      phone: '',
       skillsets: '',
       hobby: '',
       filteredEmployees: [], // Initialize filteredEmployees as empty array
