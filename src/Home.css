@@ -1,0 +1,32 @@
+.background-container {
+    position: relative;
+    right: 15%;
+  }
+  
+  .background-image {
+    width: 80%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%; /* Adjust vertical position */
+    left: 90%; /* Adjust horizontal position */
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color and opacity */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .text-overlay h1 {
+    font-size: 70px; /* Adjust font size */
+    color: #000; /* Adjust font color */
+    text-align: left;
+  }
+
+  .text-color {
+    font-size: 70px; /* Adjust font size */
+    color: #f5c208; /* Adjust font color */
+    text-underline-position: below;
+    text-align: left;
+  }

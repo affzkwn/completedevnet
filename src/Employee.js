@@ -196,7 +196,7 @@ export class Employee extends Component {
     } = this.state;
 
     return (
-      <div>
+      <div className="App container">
         <div className="input-group mb-3">
           <span className="input-group-text">Search Skillsets</span>
           <input
@@ -208,7 +208,7 @@ export class Employee extends Component {
         </div>
         <button
           type="button"
-          className="btn btn-primary m-2 float-end"
+          className="btn btn-light btn-outline-dark m-2 float-end"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           onClick={() => this.addClick()}
@@ -289,12 +289,11 @@ export class Employee extends Component {
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
 
-              <div className="modal-body">
-              <form>
-                <div className="d-flex flex-row bd-highlight mb-3">
-                  <div className="p-2 w-50 bd-highlight">
+              <div className="modal-body ">
+                <form className="d-flex flex-row bd-highlight">
+                  <div className="p-3 w-100 bd-highlight">
                     <div className="input-group mb-3">
-                      <span className="input-group-text">Name</span>
+                      <span className="input-group-text mr-5">Name</span>
                       <input
                         type="text"
                         className="form-control"
@@ -303,7 +302,7 @@ export class Employee extends Component {
                       />
                     </div>
                     <div className="input-group mb-3">
-                      <span className="input-group-text">E-mail</span>
+                      <span className="input-group-text mr-5">E-mail</span>
                       <input
                         type="email"
                         className="form-control"
@@ -312,7 +311,7 @@ export class Employee extends Component {
                       />
                     </div>
                     <div className="input-group mb-3">
-                      <span className="input-group-text">Telephone</span>
+                      <span className="input-group-text mr-5">Telephone</span>
                       <input
                         type="text"
                         className="form-control"
@@ -324,7 +323,7 @@ export class Employee extends Component {
                     />
                     </div>
                     <div className="input-group mb-3">
-                      <span className="input-group-text">Skillsets</span>
+                      <span className="input-group-text mr-5">Skillsets</span>
                       <input
                         type="text"
                         className="form-control"
@@ -333,7 +332,7 @@ export class Employee extends Component {
                       />
                     </div>
                     <div className="input-group mb-3">
-                      <span className="input-group-text">Hobby</span>
+                      <span className="input-group-text mr-5">Hobby</span>
                       <input
                         type="text"
                         className="form-control"
@@ -342,12 +341,11 @@ export class Employee extends Component {
                       />
                     </div>
                   </div>
-                </div>
                 </form>
                 {usernameId === 0 ? (
                   <button
                     type="button"
-                    className="btn btn-primary float-start"
+                    className="btn btn-primary float-start mb-3"
                     onClick={() => this.createClick()}
                   >
                     Create
