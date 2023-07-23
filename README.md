@@ -1,3 +1,6 @@
+# Home Page
+![image](https://github.com/affzkwn/completedevnet/assets/71445275/d51d7490-f9e4-4a9c-99b2-cafbc75095c2)
+# Employee Page
 ![image](https://github.com/affzkwn/completedevnet/assets/71445275/5edcaf0a-509d-4f30-a80c-7dbe88cff6fc)
 # CDN - Freelance Management Web Application Documentation (Front-End)
 # Description
